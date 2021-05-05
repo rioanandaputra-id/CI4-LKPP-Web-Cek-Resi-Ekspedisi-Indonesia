@@ -88,11 +88,22 @@
 
 				<ul class="timeline">
 					<?php 
+
+
+
+$datanya = $hasil['history'];
+
+foreach ($datanya as $key => $row) {
+    $mid[$key]  = $row['date'];
+}
+array_multisort($mid, SORT_DESC, $datanya);
+
+
 					for($i = $countnya - 1; $i >= 0; $i--) {?>
 						<li>
-				          <p><?= $hasil['history'][$i]['date'] ?></p>
-				          <p><?= $hasil['history'][$i]['desc'] ?></p>
-				          <p><?= $hasil['history'][$i]['location'] ?></p>
+				          <p><?= $datanya[$i]['date'] ?></p>
+				          <p><?= $datanya[$i]['desc'] ?></p>
+				          <p><?= $datanya[$i]['location'] ?></p>
 				      	</li>
 					<?php } ?>
 				</ul>
