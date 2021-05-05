@@ -85,7 +85,7 @@ function setClipboard(value) {
               $("i#load1").hide();
             },
               error: function(msg){
-                 document.write("Koneksi Internet Terputus!");
+                 document.write("Tidak terdeteksi, mohon periksa nomor resi dan kurir!");
               }
         });
     });
